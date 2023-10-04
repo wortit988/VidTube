@@ -77,7 +77,7 @@ const Head = () => {
             </a>
         </div>
         <div className='col-span-10 px-10'>
-            <div>
+            <div className='relative'>
                 <input 
                     type='text' 
                     value={searchQuery}
@@ -89,9 +89,9 @@ const Head = () => {
                     🔍
                 </button>
             </div>
-            {showSuggestions && (<div className='fixed bg-white py-2 px-2 w-[29.5rem] shadow-lg rounded-xl border border-gray-100'>
-                <ul>
-                    {suggestions.map((s) => (<li key={s} className='py-2 px-3 shadow-sm hover:bg-gray-100'>🔍 {s}</li>))}
+            {showSuggestions && (<div className='absolute bg-white py-2 px-2 w-[29.5rem] shadow-lg rounded-xl border border-gray-100'>
+                <ul className=''>
+                    {suggestions.map((s) => (<li key={s} className='py-2 px-3 shadow-sm hover:bg-gray-100  '>🔍 {s}</li>))}
                     
                     
                 </ul>
