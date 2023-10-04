@@ -5,6 +5,8 @@ import { YOUTUBE_SEARCH_API } from '../utils/constant';
 import store from '../utils/store';
 import { cacheResults } from "../utils/searchSlice";
 
+import Logo from "../assets/vidTube_logo.jpg"
+
 
 
 
@@ -67,9 +69,11 @@ const Head = () => {
 
             <a href="/">
             <img 
-            className='h-8 mx-2'
+            className='h-8 mx-3'
             alt='logo'
-            src='https://image.winudf.com/v2/image/Y29tLnZpZGVvLm11c2ljLnZpZC5yZWxvYWRlZGFwcF9zY3JlZW5fMF8xNTIxNjAwNTIwXzAwMg/screen-0.webp?fakeurl=1&type=.webp' />
+            src={Logo}
+            //src='https://image.winudf.com/v2/image/Y29tLnZpZGVvLm11c2ljLnZpZC5yZWxvYWRlZGFwcF9zY3JlZW5fMF8xNTIxNjAwNTIwXzAwMg/screen-0.webp?fakeurl=1&type=.webp'
+             />
             </a>
         </div>
         <div className='col-span-10 px-10'>
