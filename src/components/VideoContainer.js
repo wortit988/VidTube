@@ -2,17 +2,21 @@ import React, { useEffect, useState } from 'react';
 import { YOUTUBE_VIDEOS_API } from '../utils/constant';
 import VideoCard, { AdVideoCard } from "./VideoCard";
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import store from '../utils/store';
 
 const VideoContainer = () => {
 
 const [videos, setVideos] = useState([]);
 
-useEffect(() => {
-    getVideos();
-}, []);
+const vidCtgryId = useSelector((store) => store.buttons.ctgryId);
 
-const getVideos = async () => {
-  const data = await fetch(YOUTUBE_VIDEOS_API);
+useEffect(() => {
+    getVideos(vidCtgryId);
+}, [vidCtgryId]);
+
+const getVideos = async (vidCtgryId) => {
+  const data = await fetch(YOUTUBE_VIDEOS_API + vidCtgryId);
   const json = await data.json();
   setVideos(json.items)
 };
