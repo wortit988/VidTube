@@ -1,7 +1,5 @@
 const GOOGLE_API_KEY = process.env.REACT_APP_API_KEY;
 
-console.log("key : " + process.env.REACT_APP_API_KEY)
-
 export const LIVE_CHAT_COUNT = 25;
 
 export const YOUTUBE_VIDEOS_API =
